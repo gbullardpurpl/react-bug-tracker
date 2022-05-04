@@ -1,9 +1,10 @@
 import React from 'react';
+import Loginform from './Views/Login/login';
 
-function App() {
+const App = () => {
   return (
     <>
-      
+      <Loginform />
     </>
   );
 }
