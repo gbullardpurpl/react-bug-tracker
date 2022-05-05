@@ -14,7 +14,7 @@ import userReducer from './Controllers/Redux/userSlice';
 
 // Redux Configure
 const reducer = combineReducers({
-  auth: authReducer,
+  auth: null,
   bug: bugReducer,
   user: userReducer,
 });
@@ -23,9 +23,9 @@ const store = configureStore({
   reducer
 });
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <Provider store={store}>
     <App />
-  </Provider>,
-  document.getElementById('root')
+  </Provider>
 );

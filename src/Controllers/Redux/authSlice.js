@@ -2,10 +2,10 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const slice = createSlice({
     name: "auth",
-    inititalState: {
+    inititalState: [{
         admin: false,
         loggedIn: false,
-    },
+    }],
     reducers: {
         signIn: (state, action) => {
             const { name, password } = action.payload;
@@ -16,9 +16,9 @@ const slice = createSlice({
             state.loggedIn = false; // temporary
             state.admin = false; // temporary
         },
-        createUser: (state, action) => {
+        //createUser: (state, action) => {
             // more later
-        }
+        //}
     },
 });
 
