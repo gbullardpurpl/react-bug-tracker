@@ -2,12 +2,13 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const slice = createSlice({
     name: "auth",
-    inititalState: [{
+    initialState: [{
         admin: false,
         loggedIn: false,
     }],
     reducers: {
         signIn: (state, action) => {
+            // eslint-disable-next-line
             const { name, password } = action.payload;
             state.loggedIn = true; // temporary
             state.admin = true; // temporary

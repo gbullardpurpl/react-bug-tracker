@@ -1,0 +1,22 @@
+html {
+    margin-left: 20vw;
+    --prim-color: #264e70;
+    color: white;
+}
+button {
+    background: #ef6c57;
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: white;
+    font: normal bold 16px "Open Sans", sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+button:hover {
+    transition: all 0.3s;
+    background: #923021;
+}
+.not-logged-in {
+    color: black;
+}
