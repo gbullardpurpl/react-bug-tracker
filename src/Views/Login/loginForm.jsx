@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { signIn } from '../../Controllers/Redux/authSlice';
 
-import './login.css';
+import './loginForm.css';
 
-const Loginform = () => {
+const LoginForm = () => {
     const dispatch = useDispatch();
 
     const [formInput, setFormInput] = useState({
@@ -20,7 +20,7 @@ const Loginform = () => {
     }
 
     function submit(e) {
-        dispatch(signIn({ formInput }));
+        dispatch(signIn({formInput}));
         e.preventDefault();
     }
 
@@ -36,4 +36,4 @@ const Loginform = () => {
     );
 }
 
-export default Loginform;
+export default LoginForm;

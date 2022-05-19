@@ -10,16 +10,20 @@ const slice = createSlice({
         signIn: (state, action) => {
             // eslint-disable-next-line
             const { name, password } = action.payload;
-            state.loggedIn = true; // temporary
-            state.admin = true; // temporary
+            return state = {
+                loggedIn: true, // temporary
+                admin: true, // temporary
+            }
         },
         signOut: (state) => {
-            state.loggedIn = false; // temporary
-            state.admin = false; // temporary
+            return state = {
+                loggedIn: false, // temporary
+                admin: false, // temporary
+            }
         },
-        //createUser: (state, action) => {
+        createUser: (state, action) => {
             // more later
-        //}
+        }
     },
 });
 

@@ -3,12 +3,11 @@
     height: 105vh;
     background: url(../../images/3785935.jpeg);
     background-size: cover;
-    margin-left: -20.6vw;
-    margin-top: -27px;
     background-color: rgba(0, 0, 0, 0.68);
     background-blend-mode: multiply;
     background-attachment: fixed;
     position: absolute;
+    grid-column: 1/2;
 }
 .login-panel {
     background-color: var(--prim-color);
@@ -30,5 +29,5 @@
     border-radius: 5px;
     border: none;
     margin: 10px;
-    padding: 5px;
+    padding: 2px 10px 0 10px;
 }

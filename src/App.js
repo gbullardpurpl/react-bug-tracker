@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Loginform from './Views/Login/login';
+import LoginForm from './Views/Login/loginForm';
+//import ViewBugPage from './Views/BugCard/bugCard';
 
 const App = () => {
   const {auth} = useSelector(state => state);
@@ -8,7 +9,7 @@ const App = () => {
     <>
       {
         !auth.loggedIn ?
-        <Loginform /> : 
+        <LoginForm /> : 
         <h1 className="not-logged-in">Hello</h1>
       }
     </>

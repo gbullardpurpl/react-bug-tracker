@@ -15,7 +15,7 @@ export function retrieveBugs() {
         time: "13:03:02",
     }));
     data.push(new bugModel({
-        _id: 321654,
+        _id: 321655,
         name: "Won't load",
         details: "Crashes after 2 seconds",
         steps: "Open app and it will crash",

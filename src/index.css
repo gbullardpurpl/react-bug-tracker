@@ -1,7 +1,10 @@
-html {
-    margin-left: 20vw;
-    --prim-color: #264e70;
+#root {
+    grid-template-columns: 20% 80%;
+    display: grid;
     color: white;
+    margin: -8px;
+    --prim-color: #264e70;
+    --card-color: #cae1ff;
 }
 button {
     background: #ef6c57;
@@ -19,4 +22,11 @@ button:hover {
 }
 .not-logged-in {
     color: black;
+}
+.page-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    grid-column: 2;
 }
