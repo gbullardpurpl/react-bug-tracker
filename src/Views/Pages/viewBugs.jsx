@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getBugs } from '../../Controllers/Redux/bugSlice';
 import BugCard from '../BugCard/bugCard';
 
-export default () => {
+const ViewBugs = () => {
     const dispatch = useDispatch();
     const { bugs } = useSelector(state => state);
     
@@ -19,3 +19,5 @@ export default () => {
         </div>
     );
 }
+
+export default ViewBugs;

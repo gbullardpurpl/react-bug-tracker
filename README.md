@@ -10,3 +10,4 @@ React Router-Sidebar (Missing Video): https://www.youtube.com/watch?v=Fc91F7Ev_i
 ### More info as the tutorials progress
 
 The dependency for redux was added: (Terminal) "npm i @reduxjs/toolkit react-redux"
+The dependency for React Router DOM was added (Terminal): "npm i react-router-dom"

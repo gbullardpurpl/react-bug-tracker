@@ -2,7 +2,7 @@ import React from 'react';
 
 import './bugCard.css';
 
-export default (props) => {
+const BugCard = (props) => {
     const {name, priority, version} = props.bug;
     function Clicked() {
         props.Clicked(props.name);
@@ -15,3 +15,5 @@ export default (props) => {
         </div>
     );
 };
+
+export default BugCard;
