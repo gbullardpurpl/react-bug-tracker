@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import LoginForm from './Views/Login/loginForm';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SideBar from './Views/SideBar/sideBar';
-//import ViewBugPage from './Views/BugCard/bugCard';
+import ViewBugsPage from './Views/Pages/viewBugs';
 
 const App = () => {
   const {auth} = useSelector(state => state);
@@ -13,7 +13,10 @@ const App = () => {
         !auth.loggedIn ?
         <LoginForm /> : 
         <>
-          <SideBar />
+            <SideBar />
+            <Routes>
+              <Route path="viewbugs" element={<ViewBugsPage />} />
+            </Routes>            
         </>
       }
     </Router>

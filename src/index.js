@@ -9,18 +9,21 @@ import './index.css';
 
 // Reducers
 import authReducer from './Controllers/Redux/authSlice';
-import bugReducer from './Controllers/Redux/bugSlice';
+import bugsReducer from './Controllers/Redux/bugSlice';
 import userReducer from './Controllers/Redux/userSlice';
 
 // Redux Configure
 const reducer = combineReducers({
   auth: authReducer,
-  bug: bugReducer,
+  bugs: bugsReducer,
   user: userReducer,
 });
 
 const store = configureStore({
-  reducer
+  reducer,
+  middleware: getDefaultMiddleware => getDefaultMiddleware({
+    serializableCheck: false,
+  }),
 });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

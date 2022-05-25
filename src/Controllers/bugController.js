@@ -5,7 +5,7 @@ export function retrieveBugs() {
 
     data.push(new bugModel({
         _id: 321654,
-        name: "Crash on load",
+        bugname: "Crash on load",
         details: "Crashes after 3 seconds",
         steps: "Open app and it crashes",
         version: "v0.0.1",
@@ -16,7 +16,7 @@ export function retrieveBugs() {
     }));
     data.push(new bugModel({
         _id: 321655,
-        name: "Won't load",
+        bugname: "Won't load",
         details: "Crashes after 2 seconds",
         steps: "Open app and it will crash",
         version: "v0.0.1",
