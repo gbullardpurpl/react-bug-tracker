@@ -5,6 +5,8 @@
     margin: 10px;
     min-width: 275px;
     min-height: 200px;
+    transition: all 0.3s;
+    transform: scale(1);
 }
 
 .bug-card:hover {
