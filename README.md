@@ -10,4 +10,5 @@ React Router-Sidebar P3 (Missing Video): https://www.youtube.com/watch?v=Fc91F7E
 ### More info as the tutorials progress
 
 The dependency for redux was added: (Terminal) "npm i @reduxjs/toolkit react-redux"  
-The dependency for React Router DOM was added (Terminal): "npm i react-router-dom"
+The dependency for React Router DOM was added (Terminal): "npm i react-router-dom"  
+P4 Fix (In react-router-dom v6, "Switch" is replaced by routes "Routes"): https://stackoverflow.com/questions/63124161/attempted-import-error-switch-is-not-exported-from-react-router-dom#69849271
