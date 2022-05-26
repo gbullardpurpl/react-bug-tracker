@@ -13,7 +13,7 @@ const bugsSlice = createSlice({
 
         },
         markComplete: (state, action) => {
-
+            
         },
     }
 });

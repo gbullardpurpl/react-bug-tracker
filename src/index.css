@@ -3,7 +3,7 @@
     display: grid;
     color: white;
     margin: -8px;
-    --prim-color: #264e70;
+    --prim-color: #13548c;
     --card-color: #cae1ff;
 }
 button {
@@ -30,4 +30,5 @@ button:hover {
     justify-content: center;
     grid-column: 2;
     color: #000000;
+    margin: 1%;
 }
