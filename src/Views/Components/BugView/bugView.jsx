@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import BugViewSection from './component/bugViewSection';
 import BugModel from '../../../Models/bugModel';
 import { useDispatch } from 'react-redux';
@@ -9,9 +9,27 @@ import './bugView.css';
 const BugView = (props) => {
     const dispatch = useDispatch();
     const bug = new BugModel(props.bug);
+    const modalRef = useRef();
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener("touchstart", handleClickOutside);
+
+        return function cleanup() {
+            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("touchstart", handleClickOutside);
+        };
+        // eslint-disable-next-line
+    }, []);
+
+    function handleClickOutside(event) {
+        if (modalRef && !modalRef.current.contains(event.target)) {
+            props.clicked();
+        }
+    }
 
     return (
-        <div className="bug-view">
+        <div className="bug-view" ref={modalRef}>
             <button className="close-button" onClick={props.clicked}>Close</button>
             <h2>{bug.bugname}</h2>
             <BugViewSection title="Details" info={bug.details} />
