@@ -1,9 +1,10 @@
 import React from 'react';
+import CreateBugForm from '../Components/BugCreate/bugCreateForm';
 
-const ViewCreateBugPage = () => {
+const ViewCreateBugPage = (props) => {
     return (
-        <div className="page-container">
-            Create Bug
+        <div className="page-container">            
+            <CreateBugForm title={props.title} />
         </div>
     );
 }

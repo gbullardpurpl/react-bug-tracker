@@ -1,9 +1,9 @@
-import bugModel from '../Models/bugModel';
+import BugModel from '../Models/bugModel';
 
 export function retrieveBugs() {
     let data = [];
 
-    data.push(new bugModel({
+    data.push(new BugModel({
         _id: 321654,
         bugname: "Crash on load",
         details: "Crashes after 3 seconds",
@@ -14,7 +14,7 @@ export function retrieveBugs() {
         priority: 1,
         time: "13:03:02",
     }));
-    data.push(new bugModel({
+    data.push(new BugModel({
         _id: 321655,
         bugname: "Won't load",
         details: "Crashes after 2 seconds",

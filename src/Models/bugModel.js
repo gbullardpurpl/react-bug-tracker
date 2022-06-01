@@ -1,6 +1,6 @@
-export default bug
+export default BugModel
 
-function bug(bug) {
+function BugModel(bug) {
     if (bug !== undefined) {
         this._id = bug._id;
         this.bugname = bug.bugname;
