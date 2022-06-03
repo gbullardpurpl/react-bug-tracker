@@ -29,7 +29,7 @@ const ViewDashboardPage = () => {
 
     useEffect(() => {
         dispatch(getBugs());
-    }, [bugs === undefined]);
+    }, [bugs === undefined, dispatch]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <div className="page-container">
