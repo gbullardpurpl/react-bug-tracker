@@ -17,7 +17,7 @@ const App = () => {
         <>
             <SideBar />
             <Routes>
-              <Route path="/" element={<ViewDashboardPage />} />
+              <Route path="/" exact element={<ViewDashboardPage />} />
               <Route path="/viewbugs" element={<ViewBugsPage />} />
               <Route path="/createbug" element={<ViewCreateEditBugPage title="Create Bug" />} />
             </Routes>            
