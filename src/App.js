@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SideBar from './Views/SideBar/sideBar';
 import ViewDashboardPage from './Views/Pages/viewDashboard';
 import ViewBugsPage from './Views/Pages/viewBugs';
-import ViewCreateBugPage from './Views/Pages/createBug';
+import ViewCreateEditBugPage from './Views/Pages/createBug';
 
 const App = () => {
   const {auth} = useSelector(state => state);
@@ -19,7 +19,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<ViewDashboardPage />} />
               <Route path="/viewbugs" element={<ViewBugsPage />} />
-              <Route path="/createbug" element={<ViewCreateBugPage title="Create Bug" />} />
+              <Route path="/createbug" element={<ViewCreateEditBugPage title="Create Bug" />} />
             </Routes>            
         </>
       }

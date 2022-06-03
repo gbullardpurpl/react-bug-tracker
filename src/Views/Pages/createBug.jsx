@@ -1,12 +1,12 @@
 import React from 'react';
-import CreateBugForm from '../Components/BugCreate/bugCreateForm';
+import CreateEditBugForm from '../Components/BugCreate/bugCreateEditForm';
 
-const ViewCreateBugPage = (props) => {
+const ViewCreateEditBugPage = (props) => {
     return (
         <div className="page-container">            
-            <CreateBugForm title={props.title} />
+            <CreateEditBugForm title={props.title} />
         </div>
     );
 }
 
-export default ViewCreateBugPage;
+export default ViewCreateEditBugPage;

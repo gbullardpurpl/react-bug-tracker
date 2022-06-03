@@ -1,35 +1,51 @@
-import React, { useEffect, useRef } from 'react';
+import React, { /*useEffect, useRef, */useState } from 'react';
 import BugViewSection from './component/bugViewSection';
 import BugModel from '../../../Models/bugModel';
 import { useDispatch } from 'react-redux';
-import { markComplete } from '../../../Controllers/Redux/bugSlice'
+import { markComplete } from '../../../Controllers/Redux/bugSlice';
+import EditDeleteBug from '../BugEditDelete/bugEditDelete';
+import CreateEditBugForm from '../BugCreate/bugCreateEditForm';
 
 import './bugView.css';
 
 const BugView = (props) => {
     const dispatch = useDispatch();
     const bug = new BugModel(props.bug);
-    const modalRef = useRef();
+    //const modalRef = useRef();
+    //const editRef = useRef();
 
-    useEffect(() => {
-        document.addEventListener("mousedown", handleClickOutside);
-        document.addEventListener("touchstart", handleClickOutside);
+    // useEffect(() => {
+    //     document.addEventListener("mousedown", handleClickOutside);
+    //     document.addEventListener("touchstart", handleClickOutside);
 
-        return function cleanup() {
-            document.removeEventListener("mousedown", handleClickOutside);
-            document.removeEventListener("touchstart", handleClickOutside);
-        };
-        // eslint-disable-next-line
-    }, []);
+    //     return function cleanup() {
+    //         document.removeEventListener("mousedown", handleClickOutside);
+    //         document.removeEventListener("touchstart", handleClickOutside);
+    //     };
+    //     // eslint-disable-next-line
+    // }, []);
 
-    function handleClickOutside(event) {
-        if (modalRef && !modalRef.current.contains(event.target)) {
-            props.clicked();
-        }
+    // function handleClickOutside(event) {
+    //     if (
+    //         (modalRef && !modalRef.current.contains(event.target)) &&
+    //         (editRef && !editRef.current.contains(event.target))
+    //     ) {
+    //         props.clicked();
+    //     }
+    // }
+
+    const [displayEdit, setDisplayEdit] = useState(false);
+    function editClicked() {
+        setDisplayEdit(!displayEdit);
+    }
+
+    function deleteClicked() {
     }
 
     return (
-        <div className="bug-view" ref={modalRef}>
+        <>
+        <div className="bug-view">
+            <EditDeleteBug editClicked={editClicked} deleteClicked={deleteClicked} />
             <button className="close-button" onClick={props.clicked}>Close</button>
             <h2>{bug.bugname}</h2>
             <BugViewSection title="Details" info={bug.details} />
@@ -40,6 +56,8 @@ const BugView = (props) => {
             <BugViewSection title="Time Created" info={bug.time} />
             <p><button onClick={() => {dispatch(markComplete())}}>Mark Complete</button></p>
         </div>
+            {displayEdit && <CreateEditBugForm title="Edit Bug" bug={bug} close={editClicked} />}
+        </>
     )
 }
 

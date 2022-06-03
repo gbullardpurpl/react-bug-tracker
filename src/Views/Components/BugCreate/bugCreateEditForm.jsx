@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import BugModel from '../../../Models/bugModel';
 
-import './bugCreateForm.css';
+import './bugCreateEditForm.css';
 
-const CreateBugForm = (props) => {
+const CreateEditBugForm = (props) => {
     const [bugObject, setBugObject] = useState(new BugModel(props.bug));
 
     function inputChanged(e) {
@@ -13,7 +13,8 @@ const CreateBugForm = (props) => {
         });
     }
     return (
-        <div className="bug-create">
+        <div className="bug-create-edit">
+            {props.title === "Edit Bug" && <button className="close-button" onClick={props.close}>Close</button>}
             <h1>{props.title}</h1>
             <form>                
                 <label for="bugname">Name:</label>
@@ -44,4 +45,4 @@ const CreateBugForm = (props) => {
     );
 }
 
-export default CreateBugForm;
+export default CreateEditBugForm;
