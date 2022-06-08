@@ -18,3 +18,4 @@ Two Way Props (After P8): https://www.youtube.com/watch?v=g0dpgJi0FSY
 - Added the ability to click outside the ViewBug element/modal and it closes the ViewBug component: https://github.com/gbullardpurpl/react-bug-tracker/commit/1bc67a3dab76eb87d899863ca570026fb5112304
 - P7 Fix (In react-router-dom v6, "useHistory" is replaced by "useNavigate"): https://stackoverflow.com/questions/62861269/attempted-import-error-usehistory-is-not-exported-from-react-router-dom
 - P8 Install Postman App for API testing: https://www.postman.com/downloads/
+- P8 Also go to https://www.mongodb.com/ and create the free account for the database to be used with the API.
