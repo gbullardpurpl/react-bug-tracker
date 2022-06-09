@@ -1,5 +1,9 @@
 # React Bug Tracker Frontend Tutorial/Learning
 
+This project is a very beginner level exposure to how to build a basic bug tracker web app in React. It does not actually come to a full completion as I had hoped it would. At the point of getting the interface to perform the clickable actions and page changes it then moves into a very brief and limited exposure to connecting the app to a MongoDB (Mongoose) database and only perfmorms the simplest of api calls/actions and never truly realizes and buildoout to a useable platform.
+
+Nonetheless it does serve as a great first intro into React w some very foundational learning and a couple of "nice" hurdles to overcome from things that were not in existence when the tutorial was created.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Based on: ReactJS Tutorial: Bug-Tracker Full Project
